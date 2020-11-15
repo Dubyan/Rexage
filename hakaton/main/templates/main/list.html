@@ -1,0 +1,17 @@
+{% extends 'main/od.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1>Пользовательские маршрутные листы</h1>
+    {% for el in tours %}
+    <div class="alert alert-dark mt-2">
+    <h3>{{ el.Туроператор }}</h3>
+    <p>Гостиница, в которой удобно остановиться - {{ el.Где_остановиться }}</p>
+    <p>Кафе, где можно поесть - {{ el.Где_поесть }}</p>
+    <p>Комментарий составителя: {{ el.Комментарий }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

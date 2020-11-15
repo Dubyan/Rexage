@@ -1,0 +1,27 @@
+{% extends 'main/od.html' %}
+
+{% block title %}
+Создание маршрута
+{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <h1>Создать маршрутный лист</h1>
+    <form method="post">
+    {% csrf_token %}
+        <br><br><h3 align="center">Выберите туроператора</h3><br>
+        {{ form.Туроператор }}
+        <br><br><h3 align="center">Выберите гостиницу</h3><br>
+        {{ form.Где_остановиться }}
+        <br><br><h3 align="center">Выберите Кафе</h3><br>
+        {{ form.Где_поесть }}
+        <br><br><h3 align="center">Оставьте свой комментарий</h3><br>
+        {{ form.Комментарий }}
+        <br><br>
+               <br><br>
+  <h5 align="center"> <input type="submit" value="Сохранить"></h5>
+    <span>{{ error }}</span>
+
+    </form>
+
+{% endblock %}
